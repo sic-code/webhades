@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="menu.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT-HADES</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: none;
+    }
+
+    .product-detail {
+        margin: auto;
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    .detail-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .detail-left {
+        width: 50%;
+        border-right: 1px solid black;
+    }
+
+    .mySlides {
+        display: none;
+        margin: 0;
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+        cursor: pointer;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+        float: left;
+        width: 10%;
+        margin-left: 10px;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    .product-right {
+        text-align: left;
+        padding: 50px;
+        height: 500px;
+        width: 50%;
+        line-height: 2rem;
+    }
+
+    .product-name {
+        font-family: -bold;
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .product-id {
+        font-family: -light;
+        font-size: 11px;
+    }
+
+    .price-title {
+        font-family: -bold;
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 20px;
+        margin-left: 10px;
+        font-family: -medium;
+        color: var(--text-color-two);
+    }
+
+    .product-size {
+        display: flex;
+        text-transform: uppercase;
+        margin: 5px 0;
+    }
+
+    .product-size .size {
+        font-size: 16px;
+        font-family: -medium;
+        text-transform: uppercase;
+        border: none;
+        background: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .product-color {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .product-row {
+        margin-top: 10px;
+    }
+
+    .btn-row {
+        background-color: var(--text-color-two);
+        border: none;
+        width: 150px;
+        padding: 10px;
+        font-size: 16px;
+        font-family: -bold;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+    }
+
+    .content-details {
+        padding-top: 20px;
+    }
+
+    .content-details h2 {
+        font-family: -bold;
+        font-size: 20px;
+        line-height: 2.6rem;
+    }
+
+    .content-details p {
+        line-height: 1rem;
+        font-family: -light;
+        font-size: 13px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="header" id="myHeader">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.webp" alt="" width="200px""></a>
+                </div>
+                <nav class=" menu">
+                        <ul>
+                            <li><a href="./shopall.html">Shop All</a></li>
+                            <li><a href="./top.html">Tops</a></li>
+                            <li><a href="./bottom.html">Bottoms</a></li>
+                            <li><a href="./outerwear.html">Outerwear</a></li>
+                            <li><a href="./footerwaer.html">Footerwear</a></li>
+                            <li><a href="./about.html">about</a></li>
+                        </ul>
+        </nav>
+        <span class="header-icon">
+            <button type=""><img class="icon-search" src="/image/search.png"></button>
+            <button><img class="icon-bag" src="/image/bag.png"></button>
+        </span>
+    </div>
+    </nav>
+    <div class="product-detail">
+        <div class="detail-box">
+            <div class="detail-left">
+                <div class="mySlides">
+                    <img src="./image/product-detail/product_0.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="./image/product-detail/product_1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="./image/product-detail/product_2.jpg" style="width:100%">
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="./image/product-detail/product_0.jpg" style="width:100%"
+                            onclick="currentSlide(1)" alt="The Woods">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./image/product-detail/product_1.jpg" style="width:100%"
+                            onclick="currentSlide(2)" alt="Cinque Terre">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./image/product-detail/product_2.jpg" style="width:100%"
+                            onclick="currentSlide(3)" alt="Mountains and fjords">
+                    </div>
+                </div>
+            </div>
+            <div class="product-right">
+                <h4 class="product-name">GARNITURE BLACK SHIRT</h4>
+                <span class="product-id">SKU: V10222W</span> <br>
+                <label class="price-title" for="">Price: </label><span class="product-price">$799.00</span>
+                <div class="product-color">
+                    <span
+                        style="width: 20px; height: 20px; border: 1px solid black; background-color: white; margin-right: 15px;"
+                        class="whitek"></span>
+                    <span style="width: 20px; height: 20px;  background-color: black; " class="black"></span>
+                </div>
+                <div class="product-size">
+                    <button class="size">S</button>
+                    <button class="size">m</button>
+                    <button class="size">l</button>
+                </div>
+                <textarea name="" id="" cols="38" rows="4"></textarea>
+                <div class="product-row">
+                    <button class="btn-row">buy now</button>
+                    <button class="btn-row">add to card</button>
+                </div>
+                <div class="content-details">
+                    <h2>Product details</h2>
+                    <p>A fashion is a style of clothing or a way of behaving that is popular at a particular time. In
+                        the early seventies I wore false eyelashes, as was the fashion. If you do something in a
+                        particular fashion or after a particular fashion, you do it in that way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer id="footer">
+        <div class="d-flex m-5">
+            <div style="width: 240px;">
+                <h3 style="margin-left: 40px; ">STORE<span>LOCATOR</span></h3>
+                <p style="margin-left: 40px; ">Hỗ Trợ: 0987654321</p>
+                <p style="margin-left: 40px; ">Tư Vấn: 123456789</p>
+            </div>
+            <div style="width: 240px;">
+                <ul>
+                    <h3>Hồ Chí Minh</h3>
+                    <li><a href="">Quận 10 - 561 Sư Vạn Hạnh, Phường 13.</a></li>
+                    <li><a href="">Quận Tân Bình - 136 Nguyễn Hồng Đào, Phường 14.</a></li>
+                    <li><a href="">Quận Tân Phú - 132 Nguyễn Sơn, Phường Phú Thọ Hòa.</a></li>
+                    <li><a href="">Quận 1 - The New Playground 26 Lý Tự Trọng, Phường Bến Nghé.</a></li>
+                </ul>
+            </div>
+            <div style="width: 240px;">
+                <ul>
+                    <h3>Biên Hòa</h3>
+                    <li><a href="">TP.Biên Hòa - 151A Phan Trung, Phường Tân Mai.</a></li>
+                </ul>
+                <ul>
+                    <h3 style="margin-top: 20px;">Cần Thơ</h3>
+                    <li><a href="">Quận Ninh Kiều - 52 Mậu Thân, Phường An Phú.</a></li>
+                </ul>
+            </div>
+            <div style="width: 240px;">
+                <ul>
+                    <h3>Hà Nội</h3>
+                    <li><a href="">Đống Đa - 49-51 Hồ Đắc Di, Phường Nam Đồng.</a></li>
+                    <li><a href="">Hai Bà Trưng - Gian A9 Tầng 7 - Vincom Center 191 Bà Triệu, Phường Lê Đại Hành.</a>
+                    </li>
+                    <li><a href="">Cầu Giấy - 28 Khúc Thừa Dụ, Phường Dịch Vọng.</a></li>
+                </ul>
+            </div>
+            <div style="width: 240px;">
+                <h3 style="margin-bottom: 5px;">Fanpage</h5>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhadesvietnam%2F&tabs=timeline&width=200&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="200" height="120" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div style="width: 240px;">
+                <h3 style="margin-bottom: 5px;">GoogleMap</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.788363351132!2d106.6743788147494!3d10.827501792286867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529b45e2496bf%3A0x5d60ae47cf9c8a80!2sHADES!5e0!3m2!1sen!2s!4v1675003188709!5m2!1sen!2s"
+                        width="200" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { myFunction() };
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+</script>
+
+</html>

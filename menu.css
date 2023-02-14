@@ -1,0 +1,256 @@
+@font-face {
+    font-family: -menu;
+    src: url(/fontsize/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: -medium;
+    src: url(/fontsize/static/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: -light;
+    src: url(/fontsize/static/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: -bold;
+    src: url(/fontsize/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: -semibold;
+    src: url(/fontsize/static/Inter-SemiBold.ttf);
+}
+
+:root {
+    --text-color-one: #000000;
+    --text-color-two: #e6aa35;
+    --background: #ffffff;
+    --shadow: #00000060;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--background);
+}
+
+header {
+    margin-bottom: 500px;
+}
+
+.header {
+    display: flex;
+    line-height: 72px;
+    height: 72px;
+    padding-left: 120px;
+    white-space: nowrap;
+}
+
+/* menu tĩnh */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    padding-left: 120px;
+    background-color: #fff;
+    box-shadow: #00000089 0px 7px 10px 0px;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 102px;
+
+}
+
+
+.header .logo {
+    float: left;
+    margin-right: 142px;
+    position: relative;
+}
+
+.header .logo img {
+    position: relative;
+    top: 11px;
+}
+
+.header .menu {
+    position: relative;
+    color: var(--text-color-one);
+    display: inline-block
+}
+
+.header .menu ul {
+    position: relative;
+    /* top: -6px; */
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.header .menu ul li {
+    font-family: -semibold;
+    display: inline-block;
+    margin: 0 26px 0 26px;
+}
+
+.header .menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color-one);
+}
+
+.header .menu ul li a:hover {
+    color: var(--text-color-two);
+}
+
+.header-icon button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.line {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+}
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    margin-left: -30px;
+    margin-bottom: 100px;
+}
+
+.product-box {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    width: calc(25% - 30px);
+    margin-left: 30px;
+}
+
+.product-img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.product-info {
+    text-align: center;
+    width: 100%;
+    height: 60px;
+}
+
+.product-info h3 {
+    font-family: -medium;
+    font-size: 14px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+}
+
+.product-info h3:hover {
+    text-decoration: underline 2px solid var(--text-color-two);
+
+}
+
+.product-info span {
+    font-family: -light;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+.product-button {
+    top: -463px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.product-button:hover {
+    opacity: 1;
+}
+
+.product-button .btn {
+    padding: 0;
+    font-size: 11px;
+    font-family: -medium;
+    border: none;
+    position: relative;
+    background-color: #000;
+    color: #e6aa35;
+    bottom: -360px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product-button .btn:hover {
+    color: white;
+    background-color: var(--text-color-two);
+}
+
+footer {
+    background-color: #272626;
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    font-family: -medium;
+    margin-top: 40px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+#footer .d-flex ul li a {
+    text-decoration: none;
+    color: #e2e1e1;
+
+}
+
+.m-5 div {
+    padding: 20px 0;
+    height: 180px;
+}
+
+.m-5 h3 {
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: -bold;
+    color: var(--text-color-two);
+}
+
+.banner-shop {
+    margin-top: 50px;
+    position: relative;
+}
+
+.banner-shop img {
+    object-fit: cover;
+}
+
+.text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-center span {
+    font-family: -bold;
+    font-size: 36px;
+    color: var(--text-color-two);
+}

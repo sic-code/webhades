@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./hades-web.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADES FASHION</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <a href="#"><img src="./image/banner-1.jpg" width="100%" height="740px"></a>
+                    </div>
+                    <div class="mySlides fade">
+                        <a href="#"><img src="./image/banner-2.png" width="100%" height="740px"></a>
+                    </div>
+                    <div class="mySlides fade">
+                        <a href="#"><img src="./image/banner-3.jpg" width="100%" height="740px"></a>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" id="next" onclick="plusSlides(1)">❯</a>
+                    <div class="idot" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <div class="header-content-one">
+                    <div class="left-right">
+                        <section class="section-left">
+                            <a class='' href="#">Login to get free code still transfer 50%</a>
+                        </section>
+                        <section class="section-right">
+                            <a onclick=" showlogin()" href="#">Sign In</a>
+                            <a href="#">VietNam</a>
+                        </section>
+                        <div id="form" style="display: none;" class="form">
+                            <div class="my-form">
+                                <h1>Login Form</h1>
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <input class="input-f" id="email" type="email" placeholder="Account">
+                                        <span id="error"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="input-f" id="password" type="password" placeholder="Password">
+                                        <span style="color: red;" id="errorp"></span>
+                                    </div>
+                                    <input onclick="validate()" class="button" type="button" value="Đăng Kí">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header" id="myHeader">
+                        <div class="logo">
+                            <!-- <h2><a href="#">HADES</a></h2> -->
+                            <a href="./index.html"><img src="./image/logo.webp" alt="" width="200px""></a>
+                        </div>
+                        <nav class=" menu">
+                                <ul>
+                                    <li><a href="./shopall.html">Shop All</a></li>
+                                    <li><a href="./top.html">Tops</a></li>
+                                    <li><a href="./bottom.html">Bottoms</a></li>
+                                    <li><a href="./outerwear.html">Outerwear</a></li>
+                                    <li><a href="./footerwaer.html">Footerwear</a></li>
+                                    <li><a href="./about.html">about</a></li>
+                                </ul>
+                                </nav>
+                                <span class="header-icon">
+                                    <button type=""><img class="icon-search" src="/image/search.png"></button>
+                                    <button onclick="showhide()"><img class="icon-bag" src="/image/bag.png"></button>
+                                </span>
+                        </div>
+                        <div style="display: none;" id="giohang" class="giohang">
+                            <h3>Shopping Cart</h3>
+                            <hr>
+                            <table>
+                                <tr style="padding: 20px 50px;">
+                                    <th style="padding-right: 100px;">Product</th>
+                                    <th style="padding-right: 30px;">Price</th>
+                                    <th style="padding-right: 30px;">Quantity</th>
+                                    <th style="padding-right: 30px;">Total</th>
+                                </tr>
+                                <tbody id="mycart"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+        <section class="article-ship">
+            <section class="ship-line">
+                <img style="margin-left: 120px;" src="/image/delivery.png">
+                <div style="margin-left: 180px;" class="ship-text">
+                    <h3>Free Shipping</h3>
+                    <p>Free shipping on all US <br>
+                        order or order above $100</p>
+                </div>
+            </section>
+            <section class="ship-line">
+                <img style="margin: 34px 30px 34px 130px;" src="/image/turn-around.png">
+                <div class="ship-text">
+                    <h3>7 Days Return</h3>
+                    <p>Simply return it within <br>
+                        7 days for an exchange</p>
+                </div>
+            </section>
+            <section style="border: none;" class="ship-line">
+                <img style="margin-left: 80px;" src="/image/credit-card.png">
+                <div class="ship-text">
+                    <h3>100% Payment Secure</h3>
+                    <p>Remake money after delivery <br>
+                        100% for an exchange</p>
+                </div>
+            </section>
+        </section>
+
+        <div class="content-product">
+            <article class="fashion-collection">
+                <section style="margin-left: 120px;" class="title-season-collection">
+                    <h1 class="title-h1">FASHION COLLECTION</h1>
+                    <p class="title-sub">fashion</p>
+                    <p class="title-content">The film features Vietnamese women living in Sài Gòn (now HCM City) in the
+                        1960s. <br>
+                        Its leading character, actress.</p>
+                </section>
+                <div class="fashion-collection-product">
+                    <section class="collection-product">
+                        <img src="./image/collection-1.jpg" width="100%">
+                        <div class="collection-product-title">
+                            <h5>COLLECTION TOPS</h5>
+                            <h3>MEN’S T-SHIRT</h3>
+                            <a href="#">Shop now</a>
+                        </div>
+                    </section>
+                    <section class="collection-product">
+                        <img src="./image/collection-2.jpg" width="100%">
+                        <div style="text-align: center; right: 100px; top: 355px;" class="collection-product-title">
+                            <h5 style="color: var(--text-color-two);">COLLECTION TOPS</h5>
+                            <h3 style="color: var(--text-color-two);">MEN’S T-SHIRT</h3>
+                            <a style="color: var(--text-color-one);" href="#">Shop now</a>
+                        </div>
+                    </section>
+                    <section class="collection-product">
+                        <img src="./image/collection-3.jpg" width="100%">
+                        <div style="text-align: left; left: 15px;" class="collection-product-title">
+                            <h5>COLLECTION TOPS</h5>
+                            <h3>MEN’S T-SHIRT</h3>
+                            <a href="#">Shop now</a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <!-- product -->
+            <article class="season-collection">
+                <section style="margin-left: 120px; height: 58px;" class="title-season-collection">
+                    <h1 class="title-h1">Summer Fashion</h1>
+                    <p class="title-sub">summer</p>
+                    <!-- <p class="title-content">The film features Vietnamese women living in Sài Gòn (now HCM City) in the 1960s. <br> 
+                    Its leading character, actress.</p> -->
+                </section>
+                <section class="banner-season-fashion">
+                    <a href="#"><img src="./image/banner-summer-fashion.jpg" alt="" height="523px" width="100%"> </a>
+                </section>
+                <section class="season-fashion-title">
+                    <span>Suggest</span>
+                </section>
+                <div class="season-fashion-product">
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <a href="product.html"><img name="summerhinhanh" onmouseover="hover1_1()"
+                                    onmouseout="hover1()" width="275px" height="290px"></a>
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>LORRYLOAD CARGO SHORT</h4>
+                            <del>$190.00</del>
+                            <span>$109.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">20%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="summerhinhanh2" onmouseover="hover2_1()" onmouseout="hover2()" width="275px"
+                                height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>INFERIOR SHORT</h4>
+                            <del>$209.00</del>
+                            <span>$91.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">40%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="summerhinhanh3" onmouseover="hover3_1()" onmouseout="hover3()" alt=""
+                                width="275px" height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>CABINET BONE SHOR</h4>
+                            <del>$190.00</del>
+                            <span>$129.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">50%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="summerhinhanh4" onmouseover="hover4_1()" onmouseout="hover4()" alt=""
+                                width="275px" height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>GARNITURE BLACK SHORT</h4>
+                            <del>$250.00</del>
+                            <span>$108.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">26%</span>
+                    </section>
+                </div>
+            </article>
+            <!-- product -->
+            <article class="season-collection">
+                <section style="margin-left: 120px; height: 58px;" class="title-season-collection">
+                    <h1 class="title-h1">Winter Fashion</h1>
+                    <p class="title-sub">winter</p>
+                    <!-- <p class="title-content">The film features Vietnamese women living in Sài Gòn (now HCM City) in the 1960s. <br> 
+                    Its leading character, actress.</p> -->
+                </section>
+                <section class="banner-season-fashion">
+                    <a href="#"><img src="./image/banner-winter-fashion.jpg" alt="" height="523px" width="100%"> </a>
+                </section>
+                <section class="season-fashion-title">
+                    <span>Suggest</span>
+                </section>
+                <div class="season-fashion-product">
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <a href="product.html"><img id='aaaa' name="hinhanhwinter1" onmouseover="hoverwinter1_1()"
+                                    onmouseout="hoverwinter1()" alt="" width="275px" height="290px"></a>
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>UNDERDOG VARSITY JACKET</h4>
+                            <del>$490.00</del>
+                            <span>$399.00</span> <br>
+                            <a href="product.html"><button class="button-product-buy">Buy</button></a>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">10%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="hinhanhwinter2" onmouseover="hoverwinter2_1()" onmouseout="hoverwinter2()" alt=""
+                                width="275px" height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>METAL TRUNKS BOXY HOODIE</h4>
+                            <del>$390.00</del>
+                            <span>$299.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">40%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="hinhanhwinter3" onmouseover="hoverwinter3_1()" onmouseout="hoverwinter3()" alt=""
+                                width="275px" height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>INHUMAN HOODIE</h4>
+                            <del>$390.00</del>
+                            <span>$199.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">36%</span>
+                    </section>
+                    <section class="season-fashion-product-box">
+                        <section class="season-fashion-product-box-img">
+                            <img name="hinhanhwinter4" onmouseover="hoverwinter4_1()" onmouseout="hoverwinter4()" alt=""
+                                width="275px" height="290px">
+                        </section>
+                        <section class="season-fashion-product-box-title">
+                            <h4>MONOGRAM CARDIGAN</h4>
+                            <del>$699.00</del>
+                            <span>$599.00</span> <br>
+                            <button class="button-product-buy">Buy</button>
+                            <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                        </section>
+                        <span class="season-fashion-product-box-sale">28%</span>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="new-arrivals">
+            <article class="season-collection">
+                <section style="margin-left: 120px; height: 58px;" class="title-season-collection">
+                    <h1 class="title-h1">NEW ARRIVALS</h1>
+                    <p class="title-sub">new</p>
+                </section>
+                <div style="display: inline-block; " class="season-fashion-product">
+                    <div class="new-arrivals-one">
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/summer-fashion/summe-product-2.jpg">
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>CONCRETE TIEDYE SWEATER</h4>
+                                <del>$490.00</del>
+                                <span>$199.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">30%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/summer-fashion/summe-product-1.jpg">
+                                <!-- <img name="hinhanhwinter2" onmouseover="hoverwinter2_1()" onmouseout="hoverwinter2()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>BUTTERFLY EFFECTS SWEATER</h4>
+                                <del>$190.00</del>
+                                <span>$99.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">30%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/summer-fashion/summe-product-4.jpg">
+                                <!-- <img name="hinhanhwinter3" onmouseover="hoverwinter3_1()" onmouseout="hoverwinter3()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>OVERFLOW COACH JACKET</h4>
+                                <del>$390.00</del>
+                                <span>$199.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">30%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/summer-fashion/summe-product-3.jpg">
+                                <!-- <img name="hinhanhwinter4" onmouseover="hoverwinter4_1()" onmouseout="hoverwinter4()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>DIVISION JACKET-BLACK</h4>
+                                <del>$290.00</del>
+                                <span>$199.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">34%</span>
+                        </section>
+                    </div>
+                    <div class="new-arrivals-two">
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/winter-fashion/winter-fashion-1.jpg">
+                                <!-- <img name="hinhanhwinter1" onmouseover="hoverwinter1_1()" onmouseout="hoverwinter1()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>BUTTERFLY EFFECTS SWEATER</h4>
+                                <del>$390.00</del>
+                                <span>$299.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">23%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/winter-fashion/winter-fashion-3.jpg">
+                                <!-- <img name="hinhanhwinter2" onmouseover="hoverwinter2_1()" onmouseout="hoverwinter2()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>LONG SLEEVE T-SHIRT</h4>
+                                <del>$590.00</del>
+                                <span>$499.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">40%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/winter-fashion/winter-fashion-4.jpg">
+                                <!-- <img name="hinhanhwinter3" onmouseover="hoverwinter3_1()" onmouseout="hoverwinter3()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>CONCRETE TIEDYE SWEATER</h4>
+                                <del>$290.00</del>
+                                <span>$250.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">10%</span>
+                        </section>
+                        <section class="season-fashion-product-box">
+                            <section class="season-fashion-product-box-img">
+                                <img src="./image/winter-fashion/winter-fashion-2.jpg">
+                                <!-- <img name="hinhanhwinter4" onmouseover="hoverwinter4_1()" onmouseout="hoverwinter4()" alt="" width="275px" height="290px"> -->
+                            </section>
+                            <section class="season-fashion-product-box-title">
+                                <h4>ALPHABETIC JEAN JACKET</h4>
+                                <del>$390.00</del>
+                                <span>$359.00</span> <br>
+                                <button class="button-product-buy">Buy</button>
+                                <button onclick="addcart(this)" class="button-product-add">Add to card</button>
+                            </section>
+                            <span class="season-fashion-product-box-sale">5%</span>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1 style="font-size:50px">HAPPY NEW YEAR</h1>
+                <p style="font-size:16px">Hades Flash sale to 50%</p>
+                <button><a style="text-decoration: none" href="#">SHOW NOW</a></button>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="d-flex m-5">
+                <div style="width: 240px;">
+                    <h3 style="margin-left: 40px; ">STORE<span>LOCATOR</span></h3>
+                    <p style="margin-left: 40px; ">Hỗ Trợ: 0987654321</p>
+                    <p style="margin-left: 40px; ">Tư Vấn: 123456789</p>
+                </div>
+                <div style="width: 240px;">
+                    <ul>
+                        <h3>Hồ Chí Minh</h3>
+                        <li><a href="">Quận 10 - 561 Sư Vạn Hạnh, Phường 13.</a></li>
+                        <li><a href="">Quận Tân Bình - 136 Nguyễn Hồng Đào, Phường 14.</a></li>
+                        <li><a href="">Quận Tân Phú - 132 Nguyễn Sơn, Phường Phú Thọ Hòa.</a></li>
+                        <li><a href="">Quận 1 - The New Playground 26 Lý Tự Trọng, Phường Bến Nghé.</a></li>
+                    </ul>
+                </div>
+                <div style="width: 240px;">
+                    <ul>
+                        <h3>Biên Hòa</h3>
+                        <li><a href="">TP.Biên Hòa - 151A Phan Trung, Phường Tân Mai.</a></li>
+                    </ul>
+                    <ul>
+                        <h3 style="margin-top: 20px;">Cần Thơ</h3>
+                        <li><a href="">Quận Ninh Kiều - 52 Mậu Thân, Phường An Phú.</a></li>
+                    </ul>
+                </div>
+                <div style="width: 240px;">
+                    <ul>
+                        <h3>Hà Nội</h3>
+                        <li><a href="">Đống Đa - 49-51 Hồ Đắc Di, Phường Nam Đồng.</a></li>
+                        <li><a href="">Hai Bà Trưng - Gian A9 Tầng 7 - Vincom Center 191 Bà Triệu, Phường Lê Đại
+                                Hành.</a></li>
+                        <li><a href="">Cầu Giấy - 28 Khúc Thừa Dụ, Phường Dịch Vọng.</a></li>
+                    </ul>
+                </div>
+                <div style="width: 240px;">
+                    <h3 style="margin-bottom: 5px;">Fanpage</h5>
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhadesvietnam%2F&tabs=timeline&width=200&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            width="200" height="120" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <div style="width: 240px;">
+                    <h3 style="margin-bottom: 5px;">GoogleMap</h5>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.788363351132!2d106.6743788147494!3d10.827501792286867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529b45e2496bf%3A0x5d60ae47cf9c8a80!2sHADES!5e0!3m2!1sen!2s!4v1675003188709!5m2!1sen!2s"
+                            width="200" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="hades-web.js"></script>
+</body>
+
+</html>
